@@ -58,4 +58,44 @@ int main(){
     2)clearedibtno = n&mask;
     3)ans = clearedNiyno|(value<<i);
 
+
+    **Clear a Range of Last i Bits.
+    ~0 = -1;
+    Left shift (-1) by i places.
+    mask = (-1<<i)
+    n=n&mask;
+
+
+
+    **clearing a range of bits from i to j.
+    break it into two parts.
+    part a = (~0)<<(j+1);
+    part b = (1<<i)-1
+    mask = a|b;
+    answer = n&mask;
+
+    **Setbits in an range from i to j.
+    steps:
+    clear the bits from i to j;
+    Left shift M by i;
+    Then do OR;
+
+
+    Finding the number of setBits;
+    Approach-1: let N=13 || 1101; while(n>0){(n>>1)&1 count++} cout<<count;
+    Approach-2: ;while(n>0){(n&(n-1) count++} cout<<count; Effectively removes last setBit.
+    Approach-3:  _builtin_popcount(n)
+
+
+    **Decimal to binary
+    int ans = 0;
+    int p =1;
+    while(n>0){
+        int last_bit = (n&1);
+        ans= ans+p*last_bit;
+        p=p*10;
+        n=n>>1;
+    }
+
+
 */
