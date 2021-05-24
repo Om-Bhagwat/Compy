@@ -131,7 +131,24 @@ node*take_input(){
 
 }
 
+void reverse(node*&head){
+    node*C = head;
+    node *P =NULL;
+    node*N;
 
+    while(C!=NULL){
+
+        //Save the next node
+
+        N=C->next;
+        //Make the current node point to prev
+        C->next=P;
+        //update P and C take them 1 step forward.
+        P=C;
+        C=N;
+
+    }
+}
 
 
 int main(){
@@ -155,6 +172,7 @@ int main(){
 
 /*
 
+    Reverse A LinkList.
 
 
 */
