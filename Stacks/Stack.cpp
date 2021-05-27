@@ -2,12 +2,13 @@
 
 using namespace std;
 
+template<typename T>
 class Stack{
 
     private:
-        vector<int> v;
+        vector<T> v;
     public:
-        void push(int data){
+        void push(T data){
             v.push(data);
         }
 
@@ -21,7 +22,7 @@ class Stack{
             }
         }
 
-        int top(){
+        T top(){
             return v[v.size()-1];
         }
 };
@@ -29,6 +30,9 @@ class Stack{
 
 int main(){
 
+    Stack<int> s;
+    Stack<char> e;
+    Stack<bool> t;
 
 
     return 0;
@@ -44,5 +48,23 @@ int main(){
 
 
     Implementation.
+
+    Stack Standard Template Library(STL).
+    stack<int> s;
+    s.push(3);O(1)
+    s.push(2);
+    s.pop();O(1)
+    s.pop();
+    s.empty();
+
+
+    Reverse Stack(Actual Stack).
+
+    1)Using another Stack(1 stack).
+    2)Using Recursion.
+
+    Balanced Parenthesis.
+
+    Stock Span Problem.
 
 */
